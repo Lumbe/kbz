@@ -2,6 +2,7 @@ import axios from 'axios'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
 export default {
+  siteRoot: "http://kbz-static.s3-website-eu-west-1.amazonaws.com/",
   getSiteData: () => ({
     title: 'React Static',
   }),
