@@ -1,6 +1,5 @@
 import React from 'react'
 import { withSiteData } from 'react-static'
-import logoImg from '../logo.png'
 import FirstScreen from '../components/FirstScreen'
 import universal from 'react-universal-component'
 
@@ -16,10 +15,7 @@ const Loading = () => (
   </div>
 );
 
-const LandingSections = universal(import('../components/LandingSections'), {
-  loading: Loading,
-  error: Failed,
-});
+const LandingSections = universal(import('../components/LandingSections'));
 
 
 class Home extends React.Component {
@@ -38,8 +34,6 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <h1 style={{ textAlign: 'center' }}>Welcome to</h1>
-        {/*<img src={logoImg} alt="" />*/}
         <FirstScreen/>
         <LandingSections/>
       </div>
