@@ -21,6 +21,7 @@
     "react": "^16.0.0",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.0.0",
+    "react-headroom": "^2.2.2",
     "react-router": "^4.2.0",
     "react-slick": "^0.20.0",
     "react-static": "^5.5.14",

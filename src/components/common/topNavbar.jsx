@@ -4,14 +4,15 @@ import logo from './logo.png'
 import './topNavbar.scss'
 import FaIcon from '@fortawesome/react-fontawesome'
 import Sticky from 'react-sticky-el'
+import Headroom from 'react-headroom'
 
 class TopNavbar extends React.Component {
   render() {
     return (
-      <Sticky
-        className="top-navbar"
-        stickyClassName="sticky"
-        topOffset={50}
+      <Headroom
+        // className="top-navbar"
+        // stickyClassName="sticky"
+        // topOffset={50}
       >
         <Navbar collapseOnSelect fluid>
           <Navbar.Header>
@@ -55,7 +56,7 @@ class TopNavbar extends React.Component {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-      </Sticky>
+      </Headroom>
     )
   }
 }
