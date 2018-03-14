@@ -104,7 +104,6 @@
   width: 450px;
   left: 50%;
   transform: translate(-50%, 0);
-  z-index:10;
   padding:10px 20px 0;
   color: #f2f2f2;
   text-align: center;
@@ -206,4 +205,135 @@
 
 .slick-thumb .slick-active .img-thumb:after {
   opacity: 1;
+}
+
+
+// responsive behavior
+
+@media (max-width: 767px) {
+  .slide-item .bg-img {
+    background-size: cover;
+    background-position: center center;
+    padding-top: 100%;
+    height: 420px;
+  }
+
+  .first-screen .bg-square {
+    top: 100px;
+    height: 260px;
+    width: 300px;
+  }
+
+  .first-screen  .bg-square .bg-bottom-line {
+    height: 45px;
+    bottom: -45px;
+  }
+
+  .first-screen .heading-text {
+    top: 105px;
+  }
+
+  .first-screen .slider-buttons {
+    top: 350px;
+    width: 300px;
+    padding: 10px 10px 0;
+  }
+
+  .first-screen .heading-text h1 .first-word {
+    font-size: 48px;
+    letter-spacing: 3px;
+  }
+
+  .first-screen .heading-text h1 {
+    font-size: 38px;
+    margin:0 0 10px;
+  }
+
+  .first-screen .heading-text h3 {
+    font-size: 24px;
+  }
+
+  .first-screen .slider-buttons button {
+    font-size: 20px;
+  }
+
+  .first-screen .slider-buttons .slide-counter {
+    padding-top: 8px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .first-screen .bg-square {
+    top: 100px;
+    height: 170px;
+    width: 400px;
+  }
+
+  .first-screen  .bg-square .bg-bottom-line {
+    height: 40px;
+    bottom: -40px;
+  }
+
+  .first-screen .heading-text {
+    top: 105px;
+  }
+
+  .first-screen .slider-buttons {
+    top: 340px;
+  }
+
+  .first-screen .heading-text h1 {
+    font-size: 42px;
+    margin:0;
+  }
+
+  .first-screen .heading-text h3 {
+    font-size: 24px;
+  }
+
+  .first-screen .slider-buttons {
+    top: 262px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .first-screen .bg-square {
+    top: 100px;
+    height: 240px;
+  }
+
+  .first-screen .heading-text {
+    top: 120px;
+  }
+
+  .first-screen .slider-buttons {
+    top: 340px;
+  }
+
+  .first-screen .heading-text h1 {
+    font-size: 50px;
+  }
+
+  .first-screen .heading-text h3 {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .first-screen .bg-square {
+    top: 110px;
+    height: 270px;
+  }
+
+  .first-screen .heading-text {
+    top: 140px;
+  }
+
+  .first-screen .slider-buttons {
+    top: 380px;
+  }
+}
+
+@media (min-width: 1440px) {
+
 }

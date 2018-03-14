@@ -22,7 +22,7 @@ class TopNavbar extends React.Component {
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse className="text-center">
-            <Nav  className="cabinet">
+            <Nav className="cabinet">
               <NavItem eventKey={1} href="#">
                 <div>
                   <FaIcon icon="user"/>
@@ -30,7 +30,7 @@ class TopNavbar extends React.Component {
                   Личный кабинет</div>
               </NavItem>
             </Nav>
-            <div className="header-phone">
+            <div className="header-phone hidden-xs hidden-sm">
               <div className="phone">+38 (097) 123-45-67</div>
               <div className="callback-button">Обратный звонок</div>
             </div>

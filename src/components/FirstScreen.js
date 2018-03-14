@@ -42,6 +42,9 @@ class FirstScreen extends React.Component {
      speed: 800,
      slidesToShow: 1,
      slidesToScroll: 1,
+     responsive: [
+       { breakpoint: 1200, settings: { dots: false }}
+     ],
      customPaging: function(i) {
        return <div className="img-thumb" style={{backgroundImage: `url(${images[i]})`}}>
          <div className="cover" />
@@ -52,19 +55,6 @@ class FirstScreen extends React.Component {
    };
    return (
      <div className="first-screen">
-       <div className='slider-buttons'>
-         <button className='btn-left' onClick={this.previous}>
-           <FaIcon icon="long-arrow-alt-left" size="lg" style={{marginRight: "10px"}}/>
-           Назад
-         </button>
-         <div className="slide-counter">
-           0{activeSlide} / 0{slidesCount}
-         </div>
-         <button className='btn-right' onClick={this.next}>
-           Вперед
-           <FaIcon icon="long-arrow-alt-right" size="lg" style={{marginLeft: "10px"}}/>
-         </button>
-       </div>
        <Slider
          ref={c => this.slider = c }
          {...sliderSettings}
@@ -75,8 +65,8 @@ class FirstScreen extends React.Component {
              <div className="bg-bottom-line" />
            </div>
            <div className=" heading-text">
-             <div className="slider-brand"><span className="decorated">Комфорт без забот</span></div>
-             <h1>Сервисное обслуживание</h1>
+             <div className="slider-brand hidden-sm hidden-xs"><span className="decorated">Комфорт без забот</span></div>
+             <h1><span className="first-word">Сервисное</span> обслуживание</h1>
              <h3>домов, коттеджей и коммерческих зданий</h3>
            </div>
          </div>
@@ -86,7 +76,7 @@ class FirstScreen extends React.Component {
              <div className="bg-bottom-line" />
            </div>
            <div className=" heading-text">
-             <div className="slider-brand"><span className="decorated">Комфорт без забот</span></div>
+             <div className="slider-brand hidden-sm hidden-xs"><span className="decorated">Комфорт без забот</span></div>
              <h1>Сервисное обслуживание</h1>
              <h3>домов, коттеджей и коммерческих зданий</h3>
            </div>
@@ -97,7 +87,7 @@ class FirstScreen extends React.Component {
              <div className="bg-bottom-line" />
            </div>
            <div className=" heading-text">
-             <div className="slider-brand"><span className="decorated">Комфорт без забот</span></div>
+             <div className="slider-brand hidden-sm hidden-xs"><span className="decorated">Комфорт без забот</span></div>
              <h1>Сервисное обслуживание</h1>
              <h3>домов, коттеджей и коммерческих зданий</h3>
            </div>
@@ -108,12 +98,25 @@ class FirstScreen extends React.Component {
              <div className="bg-bottom-line" />
            </div>
            <div className=" heading-text">
-             <div className="slider-brand"><span className="decorated">Комфорт без забот</span></div>
+             <div className="slider-brand hidden-sm hidden-xs"><span className="decorated">Комфорт без забот</span></div>
              <h1>Сервисное обслуживание</h1>
              <h3>домов, коттеджей и коммерческих зданий</h3>
            </div>
          </div>
        </Slider>
+       <div className='slider-buttons'>
+         <button className='btn-left' onClick={this.previous}>
+           <FaIcon icon="long-arrow-alt-left" size="lg" style={{marginRight: "10px"}}/>
+           Назад
+         </button>
+         <div className="slide-counter hidden-xs">
+           0{activeSlide} / 0{slidesCount}
+         </div>
+         <button className='btn-right' onClick={this.next}>
+           Вперед
+           <FaIcon icon="long-arrow-alt-right" size="lg" style={{marginLeft: "10px"}}/>
+         </button>
+       </div>
      </div>
    )
  }
