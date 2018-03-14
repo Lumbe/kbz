@@ -1,5 +1,4 @@
 @import "./css/slick-slider";
-@import "./css/slick-slider-theme";
 
 img {
   max-width: 100%;
@@ -7,4 +6,8 @@ img {
 
 .content {
   //padding-top: 80px;
+}
+
+button:focus {
+  outline: none;
 }

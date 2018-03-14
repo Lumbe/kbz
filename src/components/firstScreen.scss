@@ -3,14 +3,17 @@
   position: relative;
 }
 
-.bg-image-1 {
-  background-image: url('./background1.jpg');
+.slide-item {
+  position: relative;
+}
+
+.slide-item .bg-img {
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
   height: 0;
   padding-top: 41.68%;
-  position: absolute;
+  position: relative;
   z-index: -1;
 }
 
@@ -24,8 +27,7 @@
   background-color: rgb(88, 87, 97);
   opacity: 0.8;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2),0 8px 40px 0 rgba(0, 0, 0, 0.5);
-  z-index: 1;
-  -webkit-backdrop-filter: blur(10px);
+  z-index: 2;
 }
 
 .first-screen  .bg-square .bg-bottom-line {
@@ -39,44 +41,169 @@
   opacity: 0.9;
 }
 
-.first-screen .slider-buttons {
-  position: absolute;
-  top: 450px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  z-index:10;
-  padding-top:10px;
-}
-
-
 .first-screen .heading-text {
   position: absolute;
-  top: 200px;
-  left: 50%;
-  transform: translate(-50%, 0);
+  width: 100%;
+  top: 180px;
   z-index: 10;
   text-align: center;
 }
 
-.first-screen .heading-text h1 {
-  color: #f2f2f2;
+.first-screen .heading-text .slider-brand {
+  position: relative;
+  display: inline-block;
   text-transform: uppercase;
-  font-size: 52px;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.first-screen .heading-text .slider-brand .decorated:before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  position: absolute;
+  top: 11px;
+  left: -50px;
+  background-color: #fff;
+  opacity: 0.8;
+}
+
+.first-screen .heading-text .slider-brand .decorated:after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  position: absolute;
+  top: 11px;
+  right: -50px;
+  background-color: #fff;
+  opacity: 0.8;
+}
+
+.first-screen .heading-text h1 {
+  margin: 10px 0;
+  color: #f2f2f2;
+  font-size: 70px;
   font-weight: 900;
   letter-spacing: 1px;
 }
 
 .first-screen .heading-text h3 {
-  font-weight:300;
+  margin: 5px 0 10px;
   color: #f2f2f2;
+  font-size: 30px;
+  font-weight:300;
 }
 
-.first-screen .heading-text h1:after {
+// slider 'Previous' and 'Next' buttons
+
+.first-screen .slider-buttons {
+  position: absolute;
+  top: 450px;
+  width: 450px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index:10;
+  padding:10px 20px 0;
+  color: #f2f2f2;
+  text-align: center;
+}
+
+.first-screen .slider-buttons button {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.42857;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.first-screen .slider-buttons button:hover {
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.first-screen .slider-buttons .btn-left {
+  float: left;
+}
+
+.first-screen .slider-buttons .btn-right {
+  float: right;
+}
+
+.first-screen .slider-buttons .slide-counter {
+  display: inline-block;
+  padding-top: 10px;
+}
+
+// slider bottom navigation (as image thumbnails)
+.slick-thumb .img-thumb {
+  position: relative;
+  width: 160px;
+  height: 90px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slick-thumb .cover {
+  position: relative;
+  width: 160px;
+  height: 90px;
+  transition: all 0.3s ease-in-out;
+  background: rgb(184, 146, 118);
+  opacity: 0;
+}
+
+.slick-thumb .img-thumb:hover .cover {
+  opacity: 0.8;
+}
+
+.slick-thumb .img-thumb:after {
   content: '';
+  position: absolute;
   display: block;
-  background: #58b749;
-  width: 7%;
-  height: 2px;
-  margin: 20px auto;
-  overflow: hidden;
+  width: 30%;
+  height: 4px;
+  background-color: #fff;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.slick-thumb .img-thumb:hover:after {
+  opacity: 1;
+}
+
+.slick-thumb .plus-icon {
+  position: absolute;
+  color: #fff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  z-index:2;
+}
+
+.slick-thumb .img-thumb:hover .plus-icon {
+  opacity: 1;
+}
+
+.slick-thumb .slick-active .img-thumb:after {
+  opacity: 1;
 }
