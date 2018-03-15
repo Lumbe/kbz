@@ -1,10 +1,10 @@
 import React from 'react'
-import SecondScreen from './sections/SecondScreen'
-import ThirdScreen from './sections/ThirdScreen'
+import ServicesSection from './sections/services/ServicesSection'
+import DoodleSection from './sections/doodleSection/doodleSection'
 
 export default () => (
   <div>
-    <SecondScreen/>
-    <ThirdScreen/>
+    <ServicesSection/>
+    <DoodleSection/>
   </div>
 )

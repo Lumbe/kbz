@@ -11,3 +11,60 @@ img {
 button:focus {
   outline: none;
 }
+
+h1.section-title {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 50px;
+  font-weight:700;
+}
+
+h1.section-title .decorated {
+  position: relative;
+}
+
+h1.section-title .decorated:before {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  left: -70px;
+  background-color: #b89276;
+}
+
+h1.section-title .decorated:after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  right: -70px;
+  background-color: #b89276;
+}
+
+h1.section-title .decorated .thin-line:before {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 1px;
+  position: absolute;
+  top: 51%;
+  left: -120px;
+  background-color: #414047;
+  opacity: 0.2;
+}
+
+h1.section-title .decorated .thin-line:after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 1px;
+  position: absolute;
+  top: 51%;
+  right: -120px;
+  background-color: #414047;
+  opacity: 0.2;
+}

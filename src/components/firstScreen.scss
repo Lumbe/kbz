@@ -50,11 +50,14 @@
 }
 
 .first-screen .heading-text .slider-brand {
-  position: relative;
   display: inline-block;
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 2px;
+}
+
+.first-screen .heading-text .slider-brand .decorated {
+  position: relative;
 }
 
 .first-screen .heading-text .slider-brand .decorated:before {
@@ -63,7 +66,7 @@
   width: 40px;
   height: 1px;
   position: absolute;
-  top: 11px;
+  top: 8px;
   left: -50px;
   background-color: #fff;
   opacity: 0.8;
@@ -75,7 +78,7 @@
   width: 40px;
   height: 1px;
   position: absolute;
-  top: 11px;
+  top: 8px;
   right: -50px;
   background-color: #fff;
   opacity: 0.8;

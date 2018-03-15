@@ -34,10 +34,9 @@ class FirstScreen extends React.Component {
    const slidesCount = this.state.slides;
    const activeSlide = this.state.activeSlide;
    const sliderSettings = {
-     accessibility: false,
      arrows: false,
      dots: true,
-     dotsClass: 'slick-dots slick-thumb',
+     dotsClass: 'slick-thumb',
      infinite: true,
      speed: 800,
      slidesToShow: 1,
