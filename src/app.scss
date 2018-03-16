@@ -51,7 +51,7 @@ h1.section-title .decorated .thin-line:before {
   width: 100px;
   height: 1px;
   position: absolute;
-  top: 51%;
+  top: 52%;
   left: -120px;
   background-color: #414047;
   opacity: 0.2;
@@ -63,8 +63,114 @@ h1.section-title .decorated .thin-line:after {
   width: 100px;
   height: 1px;
   position: absolute;
-  top: 51%;
+  top: 52%;
   right: -120px;
   background-color: #414047;
   opacity: 0.2;
+}
+
+// BUTTONS
+.btn {
+  position: relative;
+  border-radius: 0;
+  padding:16px 60px;
+  transition: transform 0.4s;
+}
+
+.btn:hover, .btn:focus, .btn.focus {
+  outline: none;
+}
+
+// buttons hover effect (inner frame)
+.btn-frame {
+  position: relative;
+}
+
+.btn-frame:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border: 1px solid rgba(65, 64, 71, 0.4);
+  transition: all 0.4s ease;
+  opacity: 0;
+}
+
+.btn-frame:hover.btn-frame:before {
+  opacity: 1;
+}
+
+// buttons hover effect (bottom line)
+
+.btn-line {
+  position: relative;
+}
+
+.btn-line:after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  width: 45%;
+  height: 3px;
+  background: #fff;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  transform: translateY(-10px) translateX(-50%);
+}
+
+.btn-line:hover.btn-line:after {
+  opacity: 1;
+  -webkit-transform: translateY(0px) translateX(-50%);
+  -moz-transform: translateY(0px) translateX(-50%);
+  transform: translateY(0px) translateX(-50%);
+}
+
+// Default button
+
+.btn-default {
+  color: #333;
+  background-color: transparent;
+  border-color: rgb(65, 64, 71);
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default.focus {
+  color: #fff;
+  background-color: rgb(184, 146, 118);
+  box-shadow: 0 14px 20px 0 rgba(165, 130, 104, 0.5);
+  transform: scale(1.05);
+}
+
+// Primary button
+
+.btn-primary {
+  position: relative;
+}
+
+.btn-primary:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border: 1px solid rgba(65, 64, 71, 0.4);
+}
+
+.btn-primary:hover {
+  background-color: rgb(184, 146, 118);
+  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px 0 rgba(184, 146, 118, 0.7);
+  transform: scale(1.05);
+}
+
+.btn-primary.btn-line:after {
+  bottom:0;
 }

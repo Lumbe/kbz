@@ -1,12 +1,13 @@
 import React from 'react'
 import Slider from 'react-slick'
+import {Button} from 'react-bootstrap'
+import './firstScreen.scss'
+import './slick-slider-theme.scss'
 import Background1 from './background1.jpg'
 import Background2 from './background2.jpg' // TODO: upload real img
 import Background3 from './background3.jpg' // TODO: upload real img
 import Background4 from './background4.jpg' // TODO: upload real img
 import FaIcon from '@fortawesome/react-fontawesome'
-import './firstScreen.scss'
-import './slick-slider-theme.scss'
 
 class FirstScreen extends React.Component {
   constructor(props) {
@@ -67,6 +68,7 @@ class FirstScreen extends React.Component {
              <div className="slider-brand hidden-sm hidden-xs"><span className="decorated">Комфорт без забот</span></div>
              <h1><span className="first-word">Сервисное</span> обслуживание</h1>
              <h3>домов, коттеджей и коммерческих зданий</h3>
+             <Button bsStyle="primary" className="btn-line">Подробнее</Button>
            </div>
          </div>
          <div className="slide-item">
@@ -78,6 +80,7 @@ class FirstScreen extends React.Component {
              <div className="slider-brand hidden-sm hidden-xs"><span className="decorated">Комфорт без забот</span></div>
              <h1>Сервисное обслуживание</h1>
              <h3>домов, коттеджей и коммерческих зданий</h3>
+             <Button bsStyle="primary" className="btn-line">Подробнее</Button>
            </div>
          </div>
          <div className="slide-item">
@@ -89,6 +92,7 @@ class FirstScreen extends React.Component {
              <div className="slider-brand hidden-sm hidden-xs"><span className="decorated">Комфорт без забот</span></div>
              <h1>Сервисное обслуживание</h1>
              <h3>домов, коттеджей и коммерческих зданий</h3>
+             <Button bsStyle="primary" className="btn-line">Подробнее</Button>
            </div>
          </div>
          <div className="slide-item">
@@ -100,6 +104,7 @@ class FirstScreen extends React.Component {
              <div className="slider-brand hidden-sm hidden-xs"><span className="decorated">Комфорт без забот</span></div>
              <h1>Сервисное обслуживание</h1>
              <h3>домов, коттеджей и коммерческих зданий</h3>
+             <Button bsStyle="primary" className="btn-line">Подробнее</Button>
            </div>
          </div>
        </Slider>
