@@ -2,9 +2,14 @@
   margin: 20px 10px;
   padding:20px 15px 30px;
   min-width: 200px;
-  height: 430px;
   background-color: #fff;
   text-align: center;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+}
+
+.services-slider  .slide-card:hover {
+  box-shadow: 0 14px 20px 0 rgba(0, 0, 0, 0.12);
 }
 
 .services-slider .slide-card h4 {
@@ -60,4 +65,45 @@
 
 .services-slider .slide-card .img-1 {
   padding-left: 25px;
+}
+
+
+
+// responsive behavior
+
+@media (max-width: 767px) {
+  .services-slider {
+    margin: 0 auto;
+    width: 85%;
+  }
+
+  .services-section h1.section-title {
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .services-slider {
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .services-slider {
+    margin: 0 auto;
+    width: 94%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .services-slider  .slide-card:hover {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .services-slider  .slide-card:hover {
+    margin-top: 0;
+  }
 }

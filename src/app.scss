@@ -32,6 +32,7 @@ h1.section-title .decorated:before {
   top: 50%;
   left: -70px;
   background-color: #b89276;
+  overflow: hidden;
 }
 
 h1.section-title .decorated:after {
@@ -43,6 +44,7 @@ h1.section-title .decorated:after {
   top: 50%;
   right: -70px;
   background-color: #b89276;
+  overflow: hidden;
 }
 
 h1.section-title .decorated .thin-line:before {
@@ -55,6 +57,7 @@ h1.section-title .decorated .thin-line:before {
   left: -120px;
   background-color: #414047;
   opacity: 0.2;
+  overflow: hidden;
 }
 
 h1.section-title .decorated .thin-line:after {
@@ -67,6 +70,7 @@ h1.section-title .decorated .thin-line:after {
   right: -120px;
   background-color: #414047;
   opacity: 0.2;
+  overflow: hidden;
 }
 
 // BUTTONS
@@ -173,4 +177,32 @@ h1.section-title .decorated .thin-line:after {
 
 .btn-primary.btn-line:after {
   bottom:0;
+}
+
+
+// responsive behavior
+
+@media (max-width: 767px) {
+  h1.section-title {
+    font-size: 34px;
+  }
+
+  h1.section-title .decorated:before,
+  h1.section-title .decorated:after,
+  h1.section-title .decorated .thin-line:before ,
+  h1.section-title .decorated .thin-line:after {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+}
+
+@media (min-width: 1440px) {
 }

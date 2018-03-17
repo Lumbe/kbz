@@ -27,7 +27,7 @@ $brand-danger: #d9534f !default;
 //** Background color for `<body>`.
 $body-bg: #EFEFF2;
 //** Global text color on `<body>`.
-$text-color: #414047;
+$text-color: #4c4b53;
 
 //** Global textual link color.
 $link-color: $brand-primary !default;
@@ -57,6 +57,17 @@ $font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
 $font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-h5:            $font-size-base !default;
 $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:        1.428571429 !default; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+
+//** By default, this inherits from the `<body>`.
+$headings-font-family:    inherit !default;
+$headings-font-weight:    500 !default;
+$headings-line-height:    1.1 !default;
+$headings-color:          #414047;
 
 
 $grid-float-breakpoint: 1025px;

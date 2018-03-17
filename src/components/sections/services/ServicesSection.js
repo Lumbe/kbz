@@ -15,7 +15,9 @@ export default class ServicesSection extends React.Component {
       slidesToShow: 4,
       slidesToScroll: 1,
       responsive: [
-        { breakpoint: 1200, settings: { dots: false }}
+        { breakpoint: 767, settings: { slidesToShow: 1 }},
+        { breakpoint: 991, settings: { slidesToShow: 2 }},
+        { breakpoint: 1200, settings: { slidesToShow: 3 }}
       ]
     };
     return (
