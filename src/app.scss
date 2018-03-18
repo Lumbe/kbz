@@ -207,8 +207,11 @@ h1.section-title.light .decorated .thin-line:after {
   border: 1px solid rgb(76, 75, 83);
 }
 
-.btn-more:hover,
 .btn-more:focus {
+  color: #fff;
+}
+
+.btn-more:hover {
   color: #fff;
   text-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0 10px 25px 0 rgba(184, 146, 118, 0.7);
