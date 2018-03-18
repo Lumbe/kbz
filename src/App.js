@@ -7,7 +7,9 @@ import './app.scss'
 import Navbar from './components/common/topNavbar'
 import fontawesome from '@fortawesome/fontawesome'
 import {faUser } from '@fortawesome/fontawesome-free-solid'
+import {utils, Button} from 'react-bootstrap'
 
+utils.bootstrapUtils.addStyle(Button, 'more');
 fontawesome.library.add(faUser);
 
 const App = () => (

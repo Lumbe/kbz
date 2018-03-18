@@ -1,0 +1,131 @@
+.service-packs {
+  position: relative;
+}
+
+.service-packs-section .service-card {
+  margin: 20px 0;
+  //padding:20px 15px 30px;
+  min-width: 200px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+}
+
+.service-packs-section .service-card:hover {
+  box-shadow: 0 14px 20px 0 rgba(0, 0, 0, 0.12);
+}
+
+.service-packs-section .service-card .heading {
+  position: relative;
+  background-image: url('./texture.png');
+}
+
+.service-packs-section .service-card .heading h2 {
+  padding: 25px 25px 0;
+  font-size: 32px;
+  color: #fff;
+  font-weight:bold;
+}
+
+.service-packs-section .service-card .heading h2:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-top: 15px;
+  background-color: #414047;
+  opacity: 0.1;
+}
+
+.service-packs-section .service-card .description {
+  color: #fff;
+  padding: 5px 25px 40px;
+}
+
+.service-packs-section .service-card .price {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #b89276;
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translate(-50%);
+  white-space: nowrap;
+}
+
+
+.service-packs-section .service-card .list-title {
+  position: relative;
+  font-weight: bold;
+  color: rgb(76, 75, 83);
+  margin-top: 30px;
+}
+
+.service-packs-section .service-card .list-title:before {
+  content: '';
+  display: block;
+  width: 20%;
+  height: 1px;
+  position: absolute;
+  top: 52%;
+  left: 25px;
+  background-color: #414047;
+  opacity: 0.2;
+}
+
+.service-packs-section .service-card .list-title:after {
+  content: '';
+  display: block;
+  width: 20%;
+  height: 1px;
+  position: absolute;
+  top: 52%;
+  right: 25px;
+  background-color: #414047;
+  opacity: 0.2;
+}
+
+.service-packs-section .service-card ul.services-list {
+  padding: 0 25px;
+  list-style: none;
+}
+
+.service-packs-section .service-card ul.services-list li:before {
+  content: "•";
+  color: rgb(184, 146, 118);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.service-packs-section .service-card .btn-wrapper {
+  padding: 10px 20px 20px;
+}
+
+// responsive behavior
+
+@media (max-width: 767px) {
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .service-packs-section .service-card:hover {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .service-packs-section .service-card:hover {
+    margin-top: 0;
+  }
+}

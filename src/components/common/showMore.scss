@@ -1,0 +1,28 @@
+.show-more {
+  position: relative;
+}
+
+.show-more:before {
+  content: '';
+  display: block;
+  width: 40%;
+  height: 1px;
+  position: absolute;
+  top: 52%;
+  background-color: #414047;
+  opacity: 0.2;
+  z-index: 2;
+}
+
+.show-more:after {
+  content: '';
+  display: block;
+  width: 40%;
+  height: 1px;
+  position: absolute;
+  top: 52%;
+  right: 0;
+  background-color: #414047;
+  opacity: 0.2;
+  z-index: 1;
+}

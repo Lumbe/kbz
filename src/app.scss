@@ -100,6 +100,7 @@ h1.section-title.light .decorated .thin-line:after {
 
 .btn:hover, .btn:focus, .btn.focus {
   outline: none;
+  box-shadow: none;
 }
 
 // buttons hover effect (inner frame)
@@ -196,6 +197,23 @@ h1.section-title.light .decorated .thin-line:after {
   bottom:0;
 }
 
+// more button
+.btn-more {
+  padding: 0;
+  width: 25px;
+  height: 25px;
+  color: #fff;
+  background-color: rgba(76, 75, 83, 0.702);
+  border: 1px solid rgb(76, 75, 83);
+}
+
+.btn-more:hover,
+.btn-more:focus {
+  color: #fff;
+  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px 0 rgba(184, 146, 118, 0.7);
+  transform: scale(1.05);
+}
 
 // responsive behavior
 
