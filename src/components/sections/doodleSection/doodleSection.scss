@@ -5,10 +5,38 @@
 }
 
 .doodle-wrapper {
+  position: relative;
+  display: inline-block;
+  min-width: 1px; // todo: remove
+  min-height: 1px; // todo: remove
+  max-width: 640px;
+  max-height: 360px;// todo: remove
+  width: 100%;
+  background-color: #fff;
+}
+
+.doodle-section .doodle-wrapper .load-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.cover-wrapper {
+  position: relative;
   display: inline-block;
   min-width: 1px; // todo: remove
   max-width: 640px;
   min-height: 360px;// todo: remove
   width: 100%;
-  background-color: #fff;
+  background-color: green;
+  z-index: 4;
 }
+
+.player-wrapper {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+}
+

@@ -2,7 +2,7 @@ import React from 'react'
 import {Grid, Row, Col, Modal} from 'react-bootstrap'
 import './doodleSection.scss'
 import YouTube from 'react-youtube'
-
+import FaIcon from '@fortawesome/react-fontawesome'
 export default class DoodleVideo extends React.Component {
   constructor(props) {
     super(props);
@@ -13,14 +13,9 @@ export default class DoodleVideo extends React.Component {
     this.setState({showDoodle: !this.state.showDoodle})
   }
 
-  _onReady() {
-    console.log('ready!')
-  }
-
   render() {
     const playerOpts = {
-      height: '360',
-      width: '640',
+      width: '100%',
       playerVars: { // https://developers.google.com/youtube/player_parameters
         autoplay: 1
       }
@@ -39,17 +34,20 @@ export default class DoodleVideo extends React.Component {
             </div>
           </Col>
           <Col md={12} className="text-center">
-            {this.state.showDoodle
-              ?
-                <YouTube
-                  style={{width: '100%'}}
-                  videoId="NrXQlyb0XkM"
-                  opts={playerOpts}
-                  onReady={this._onReady}
-                />
-              :
-                <div className="doodle-wrapper"  onClick={this.toggle.bind(this)}/>
-            }
+            <div className="doodle-wrapper">
+              <FaIcon icon="spinner" spin size="lg" className="load-icon"/>
+              {this.state.showDoodle
+                ?
+                  <div className="player-wrapper">
+                    <YouTube
+                      videoId="NrXQlyb0XkM"
+                      opts={playerOpts}
+                    />
+                  </div>
+                :
+                  <div className="cover-wrapper" onClick={this.toggle.bind(this)}/>
+              }
+            </div>
           </Col>
         </Row>
       </Grid>
