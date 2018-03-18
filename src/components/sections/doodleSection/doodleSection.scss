@@ -1,0 +1,14 @@
+.doodle-section {
+  background-image: url('./bg.jpg');
+  background-size: contain;
+  padding-bottom: 40px;
+}
+
+.doodle-wrapper {
+  display: inline-block;
+  min-width: 1px; // todo: remove
+  max-width: 640px;
+  min-height: 360px;// todo: remove
+  width: 100%;
+  background-color: #fff;
+}
