@@ -77,3 +77,32 @@
   background-color: rgb(184, 146, 118);
   transition: all 0.3s;
 }
+
+// responsive behavior
+
+@media (max-width: 767px) {
+  .steps-slider {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .steps-slider .slick-prev,
+  .steps-slider .slick-next {
+    top: 43%
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+
+}
+
+@media (min-width: 1440px) {
+
+}

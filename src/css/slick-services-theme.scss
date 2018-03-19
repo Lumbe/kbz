@@ -56,6 +56,11 @@
   background-color: #898488;
 }
 
+.slick-prev.slick-disabled,
+.slick-next.slick-disabled {
+  opacity: .4;
+}
+
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before
 {
@@ -209,28 +214,4 @@
 {
   opacity: .75;
   color: black;
-}
-
-// responsive behavior
-
-@media (max-width: 767px) {
-  .slick-prev {
-    left: -30px;
-  }
-
-  .slick-next {
-    right: -30px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-}
-
-@media (min-width: 1200px) and (max-width: 1439px) {
-}
-
-@media (min-width: 1440px) {
 }
