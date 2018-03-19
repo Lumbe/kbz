@@ -7,11 +7,8 @@
 .doodle-wrapper {
   position: relative;
   display: inline-block;
-  min-width: 1px; // todo: remove
-  min-height: 1px; // todo: remove
-  max-width: 640px;
-  max-height: 360px;// todo: remove
-  width: 100%;
+  width: 640px;
+  height: 360px;
   background-color: #fff;
 }
 
@@ -24,13 +21,12 @@
 }
 
 .cover-wrapper {
+  background-image: url('./cover.jpg');
   position: relative;
   display: inline-block;
-  min-width: 1px; // todo: remove
-  max-width: 640px;
-  min-height: 360px;// todo: remove
   width: 100%;
-  background-color: green;
+  min-height: 1px;
+  height: 100%;
   z-index: 4;
 }
 
@@ -40,3 +36,31 @@
   width: 100%;
 }
 
+// responsive behavior
+
+@media (max-width: 320px) {
+  .doodle-wrapper {
+    width: 290px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .doodle-wrapper {
+    width: 320px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+
+}
+
+@media (min-width: 1440px) {
+
+}
