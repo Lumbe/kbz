@@ -4,6 +4,7 @@ import DoodleSection from './sections/doodleSection/doodleSection'
 import ServicePacks from './sections/servicePacks/servicePacks'
 import Advantages from './sections/advantages/advantages'
 import Gallery from './sections/gallery/gallery'
+import Steps from './sections/steps/steps'
 
 export default () => (
   <div>
@@ -12,5 +13,6 @@ export default () => (
     <ServicePacks/>
     <Advantages/>
     <Gallery/>
+    <Steps/>
   </div>
 )

@@ -218,6 +218,17 @@ h1.section-title.light .decorated .thin-line:after {
   transform: scale(1.05);
 }
 
+// link button
+.btn-link {
+  position: relative;
+  padding: 0 3px;
+  transition: all 0.3s;
+}
+
+.btn-link:hover {
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
 // responsive behavior
 
 @media (max-width: 767px) {

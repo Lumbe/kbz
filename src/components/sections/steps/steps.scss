@@ -1,0 +1,79 @@
+.steps-section .step {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.steps-section .step img {
+  display: inline-block;
+}
+
+.steps-section .step p.description {
+  display: inline-block;
+  max-width: 200px;
+  font-weight: bold;
+}
+
+.steps-section .step h4 {
+  position: relative;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.steps-section .step h4:before {
+  content: '';
+  display: block;
+  width: 35%;
+  height: 1px;
+  position: absolute;
+  top: 52%;
+  left: 0;
+  background-color: #414047;
+  opacity: 0.2;
+}
+
+.steps-section .step h4:after {
+  content: '';
+  display: block;
+  width: 35%;
+  height: 1px;
+  position: absolute;
+  top: 52%;
+  right: 0;
+  background-color: #414047;
+  opacity: 0.2;
+}
+
+.steps-section .step h4 .step-title {
+  padding: 4px 12px;
+  transition: all 0.4s;
+}
+
+.steps-section .step:hover h4 .step-title {
+  background-color: #b89276;
+  color: #fff;
+  box-shadow: 0 14px 20px 0 rgba(165, 130, 104, 0.5);
+}
+
+.steps-section .step:hover h4 .step-title:before {
+  content: '';
+  display: block;
+  width: 25%;
+  left: 10%;
+  top: 52%;
+  height: 1px;
+  position: absolute;
+  background-color: rgb(184, 146, 118);
+  transition: all 0.3s;
+}
+
+.steps-section .step:hover h4 .step-title:after {
+  content: '';
+  display: block;
+  width: 25%;
+  height: 1px;
+  position: absolute;
+  top: 52%;
+  right: 10%;
+  background-color: rgb(184, 146, 118);
+  transition: all 0.3s;
+}
