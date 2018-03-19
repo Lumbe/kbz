@@ -5,9 +5,33 @@ import Image1 from './images/evrus.jpg'
 import Image2 from './images/serseya-560.jpg'
 import Image3 from './images/hyperion.jpg'
 import './gallery.scss'
+import FaIcon from '@fortawesome/react-fontawesome'
 
 export default class Gallery extends React.Component {
+  constructor(props) {
+    super(props);
+    this.next = this.next.bind(this);
+    this.previous = this.previous.bind(this);
+    this.setActiveSlide = this.setActiveSlide.bind(this);
+    this.state = {slides: 4, activeSlide: 1}
+  }
+
+  next() {
+    this.slider.slickNext()
+  }
+  previous() {
+    this.slider.slickPrev()
+  }
+
+  setActiveSlide(index) {
+    let slidesCount = this.state.slides;
+    index > slidesCount ? this.setState({activeSlide: 1}) : this.setState({activeSlide: index})
+  }
+
   render() {
+    // TODO: prev and next slide navigation + responsive
+    const slidesCount = this.state.slides;
+    const activeSlide = this.state.activeSlide;
     const sliderSettings = {
       className: 'gallery-slider',
       arrows: false,
@@ -20,9 +44,10 @@ export default class Gallery extends React.Component {
       slidesToScroll: 1,
       responsive: [
         { breakpoint: 767, settings: { slidesToShow: 1 }},
-        { breakpoint: 991, settings: { slidesToShow: 2 }},
+        { breakpoint: 991, settings: { slidesToShow: 3 }},
         { breakpoint: 1200, settings: { slidesToShow: 3 }}
-      ]
+      ],
+      afterChange: (newIndex) => this.setActiveSlide(newIndex + 1)
     };
     return (
       <div className="gallery-section">
@@ -39,7 +64,10 @@ export default class Gallery extends React.Component {
               </div>
             </Col>
           </Row>
-          <Slider {...sliderSettings}>
+          <Slider
+            ref={c => this.slider = c }
+            {...sliderSettings}
+          >
             <div>
               <Image src={Image1}/>
               <div className="cover"/>
@@ -57,6 +85,19 @@ export default class Gallery extends React.Component {
               <div className="cover"/>
             </div>
           </Slider>
+          <div className='slider-buttons'>
+            <button className='btn-left' onClick={this.previous}>
+              <FaIcon icon="long-arrow-alt-left" size="lg" style={{marginRight: "10px"}}/>
+              Назад
+            </button>
+            <div className="slide-counter">
+              0{activeSlide} / 0{slidesCount}
+            </div>
+            <button className='btn-right' onClick={this.next}>
+              Вперед
+              <FaIcon icon="long-arrow-alt-right" size="lg" style={{marginLeft: "10px"}}/>
+            </button>
+          </div>
         </Grid>
       </div>
     )

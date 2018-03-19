@@ -1,16 +1,8 @@
 .gallery-section {
+  position: relative;
   background-image: url('./bg.jpg');
   background-size: cover;
   padding: 20px 0 60px;
-}
-
-.gallery-section .gallery-slider {
-  //width: 82%;
-  //margin: 0 auto;
-}
-
-.gallery-section .gallery-slider .slick-list {
-  //padding: 0 !important;
 }
 
 .gallery-slider .slick-slide {
@@ -49,4 +41,109 @@
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+}
+
+// slider 'Previous' and 'Next' buttons
+
+.gallery-section .slider-buttons {
+  position: absolute;
+  top: 410px;
+  width: 375px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 5px 10px;
+  color: #f2f2f2;
+  text-align: center;
+  background-image: -webkit-linear-gradient(-90deg, rgba(44, 44, 48, 0.9) 0%, rgba(60, 60, 66, 0.9) 43%);
+}
+
+.gallery-section .slider-buttons button {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.42857;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.gallery-section .slider-buttons button:hover {
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.gallery-section .slider-buttons .btn-left {
+  float: left;
+}
+
+.gallery-section .slider-buttons .btn-right {
+  float: right;
+}
+
+.gallery-section .slider-buttons .slide-counter {
+  display: inline-block;
+  padding-top: 8px;
+}
+
+
+// responsive behavior
+
+@media (max-width: 767px) {
+  .gallery-section .slider-buttons {
+    top: 87%;
+    width: 88%;
+    padding: 5px 0;
+  }
+
+  .gallery-section .slider-buttons button {
+    font-size: 18px;
+  }
+
+  .gallery-section .slider-buttons .btn-left {
+    padding: 6px 2px 6px 12px;
+  }
+
+  .gallery-section .slider-buttons .btn-right {
+    padding: 6px 12px 6px 2px;
+  }
+
+  .gallery-section .slider-buttons .slide-counter {
+    padding-top: 8px;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .gallery-section .slider-buttons {
+    top: 370px;
+    width: 310px;
+    padding: 5px 0;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .gallery-section .slider-buttons {
+    top: 365px;
+    width: 310px;
+    padding: 5px 0;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .gallery-section .slider-buttons {
+    top: 380px;
+  }
+}
+
+@media (min-width: 1440px) {
 }
