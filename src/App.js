@@ -20,9 +20,9 @@ class App extends React.Component {
   //   this.state = {preloader: true}
   // }
 
-  componentDidMount() {
-    setTimeout(() => this.setState({preloader: false}), 4000)
-  }
+  // componentDidMount() {
+  //   setTimeout(() => this.setState({preloader: false}), 4000)
+  // }
 
   render() {
     return (
