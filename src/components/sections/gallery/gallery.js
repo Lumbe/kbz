@@ -1,9 +1,9 @@
 import React from 'react'
 import Slider from 'react-slick'
 import {Grid, Row, Col, Image} from 'react-bootstrap'
-import Image1 from './images/evrus.jpg'
-import Image2 from './images/serseya-560.jpg'
-import Image3 from './images/hyperion.jpg'
+import Image1 from './images/img1.jpg'
+import Image2 from './images/img2.jpg'
+import Image3 from './images/img3.jpg'
 import './gallery.scss'
 import FaIcon from '@fortawesome/react-fontawesome'
 
@@ -29,7 +29,6 @@ export default class Gallery extends React.Component {
   }
 
   render() {
-    // TODO: prev and next slide navigation + responsive
     const slidesCount = this.state.slides;
     const activeSlide = this.state.activeSlide;
     const sliderSettings = {
@@ -69,7 +68,7 @@ export default class Gallery extends React.Component {
             {...sliderSettings}
           >
             <div className="effect-apollo">
-              <Image src={Image1} className="gallery-image"/>
+              <Image src={Image3} className="gallery-image"/>
               <div className="cover"/>
             </div>
             <div className="effect-apollo">
@@ -81,7 +80,7 @@ export default class Gallery extends React.Component {
               <div className="cover"/>
             </div>
             <div className="effect-apollo">
-              <Image src={Image2} className="gallery-image"/>
+              <Image src={Image1} className="gallery-image"/>
               <div className="cover"/>
             </div>
           </Slider>
