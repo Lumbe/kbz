@@ -34,7 +34,7 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <FirstScreen/>
+        {/*<FirstScreen/>*/}
         <LandingSections/>
       </div>
     )

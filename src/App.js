@@ -10,6 +10,7 @@ import fontawesome from '@fortawesome/fontawesome'
 import {faUser } from '@fortawesome/fontawesome-free-solid'
 import brands from '@fortawesome/fontawesome-free-brands'
 import {utils, Button} from 'react-bootstrap'
+import FirstScreen from './components/firstScreen/FirstScreen'
 
 utils.bootstrapUtils.addStyle(Button, 'more');
 fontawesome.library.add(faUser, brands);
@@ -37,6 +38,7 @@ class App extends React.Component {
             {/*</nav>*/}
             <Navbar/>
             <div className="content">
+              <FirstScreen/>
               <Routes />
             </div>
             <Footer/>

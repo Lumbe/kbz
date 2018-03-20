@@ -1,6 +1,9 @@
 .first-screen {
   margin-top: -80px;
   position: relative;
+  background: rgba(88,87,97, 0.8) url(./background1.jpg);
+  transition: background-color 1s linear, background-image 0s linear 1s;
+  //background-color: rgba(88,87,97, 0.8);
 }
 
 .slide-item {
