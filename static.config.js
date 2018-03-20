@@ -73,6 +73,8 @@ export default {
         ],
       },
     ];
+    config.extractCssChunks = true;
+    config.inlineCss = true;
     return config
   },
 }
