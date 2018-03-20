@@ -1,0 +1,224 @@
+footer .footer {
+  background-color: rgb(76, 75, 83);
+  padding: 20px 0;
+}
+
+// logo
+footer .navbar-brand {
+  padding: 0;
+}
+
+// copyright
+footer .copyright {
+  padding: 5px 0;
+  background-color: rgb(63, 62, 69);
+  color: rgba(255, 255, 255, 0.502);
+}
+
+// navbar
+ul.footer-menu {
+  list-style: none;
+  margin-top: 16px;
+  padding-left: 0;
+  min-height: 30px;
+}
+
+ul.footer-menu > li {
+  float: left;
+  position: relative;
+  display: block;
+}
+
+ul.footer-menu > li > a {
+  color: rgba(255, 255, 255, 0.702);
+  padding: 27px 5px;
+  line-height: 22px;
+  transition: all 0.3s;
+}
+
+ul.footer-menu > li > a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul.footer-menu > li > a::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgb(184, 146, 118);
+  box-shadow: 0 0 4px rgba(184, 146, 118, 0.5);
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.4s, -webkit-transform 0.4s;
+  -moz-transition: opacity 0.4s, -moz-transform 0.4s;
+  transition: opacity 0.4s, transform 0.4s;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  transform: translateY(10px);
+}
+
+ul.footer-menu > li > a:hover::after,
+ul.footer-menu > li > a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+footer .btn-footer {
+  margin: 4px 0;
+  padding: 8px 25px;
+}
+
+// social buttons
+
+footer .social-buttons {
+  text-align: center;
+}
+
+footer .social-buttons .wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+footer .social-buttons .wrapper .social-item {
+  position: relative;
+  display: inline-block;
+  margin: 4px 20px;
+  padding: 8px;
+  color: #fff;
+  border: 1px solid rgb(34, 27, 33);
+  transition: all 0.3s;
+}
+
+footer .social-buttons .social-item:hover {
+  background-color: rgba(34, 27, 33, 0.702);
+}
+
+footer .social-buttons .social-item:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background-image: -moz-linear-gradient( 90deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+footer .social-buttons .social-item:hover:before {
+  opacity: 1;
+}
+
+footer .social-buttons .social-item:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width:50%;
+  height: 1px;
+  background-color: #fff;
+  transform: translate(-50%);
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+footer .social-buttons .social-item:hover:after {
+  opacity: 1;
+}
+
+footer .social-buttons .wrapper .social-title {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  color: rgba(255, 255, 255, 0.702);
+  transition: color 0.3s;
+}
+
+footer .social-buttons .wrapper .social-item:hover + .social-title {
+  color: #fff;
+}
+
+// responsive
+
+@media (max-width: 767px) {
+  footer .navbar-header {
+    text-align: center;
+  }
+
+  footer .navbar-header .navbar-brand {
+    float: none;
+  }
+
+  footer .btn-footer {
+    margin: 20px 0;
+  }
+
+  footer .text-center-xs {
+    text-align: center;
+  }
+
+  footer .social-buttons {
+    margin-bottom: 20px;
+  }
+
+  footer .social-buttons .wrapper .social-title {
+    top: 55px;
+  }
+
+  footer .copyright {
+    text-align: center;
+  }
+  
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  ul.footer-menu {
+    margin-top: 4px;
+  }
+
+  footer .social-buttons {
+    margin-bottom: 20px;
+  }
+
+  footer .btn-footer {
+    padding: 8px 20px;
+  }
+
+  footer .social-buttons .wrapper .social-title {
+    top: 55px;
+  }
+
+  footer .copyright {
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  ul.footer-menu {
+    margin-top: 4px;
+  }
+
+  footer .social-buttons .wrapper .social-item {
+    margin: 4px 15px;
+  }
+
+  footer .social-buttons .wrapper .social-title {
+    top: 75px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+
+}
+
+@media (min-width: 1440px) {
+
+}

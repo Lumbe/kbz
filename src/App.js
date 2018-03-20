@@ -5,12 +5,14 @@ import Routes from 'react-static-routes'
 import './bootstrap.scss'
 import './app.scss'
 import Navbar from './components/common/topNavbar'
+import Footer from './components/common/footer'
 import fontawesome from '@fortawesome/fontawesome'
 import {faUser } from '@fortawesome/fontawesome-free-solid'
+import brands from '@fortawesome/fontawesome-free-brands'
 import {utils, Button} from 'react-bootstrap'
 
 utils.bootstrapUtils.addStyle(Button, 'more');
-fontawesome.library.add(faUser);
+fontawesome.library.add(faUser, brands);
 
 const App = () => (
   <Router>
@@ -25,6 +27,7 @@ const App = () => (
       <div className="content">
         <Routes />
       </div>
+      <Footer/>
     </div>
   </Router>
 )

@@ -54,7 +54,7 @@ class FirstScreen extends React.Component {
      afterChange: (newIndex) => this.setActiveSlide(newIndex + 1)
    };
    return (
-     <div className="first-screen">
+     <div className="first-screen" style={{minHeight: '600px'}}>
        <Slider
          ref={c => this.slider = c }
          {...sliderSettings}
