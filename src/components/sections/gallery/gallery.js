@@ -68,20 +68,20 @@ export default class Gallery extends React.Component {
             ref={c => this.slider = c }
             {...sliderSettings}
           >
-            <div>
-              <Image src={Image1}/>
+            <div className="effect-apollo">
+              <Image src={Image1} className="gallery-image"/>
               <div className="cover"/>
             </div>
-            <div>
-              <Image src={Image2}/>
+            <div className="effect-apollo">
+              <Image src={Image2} className="gallery-image"/>
               <div className="cover"/>
             </div>
-            <div>
-              <Image src={Image3}/>
+            <div className="effect-apollo">
+              <Image src={Image3} className="gallery-image"/>
               <div className="cover"/>
             </div>
-            <div>
-              <Image src={Image2}/>
+            <div className="effect-apollo">
+              <Image src={Image2} className="gallery-image"/>
               <div className="cover"/>
             </div>
           </Slider>
