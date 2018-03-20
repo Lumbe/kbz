@@ -1,6 +1,6 @@
 import React from 'react'
 import { withSiteData } from 'react-static'
-import FirstScreen from '../components/FirstScreen'
+import FirstScreen from '../components/firstScreen/FirstScreen'
 import universal from 'react-universal-component'
 
 const Failed = () => (

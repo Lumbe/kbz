@@ -8,6 +8,10 @@ import Background2 from './background2.jpg' // TODO: upload real img
 import Background3 from './background3.jpg' // TODO: upload real img
 import Background4 from './background4.jpg' // TODO: upload real img
 import FaIcon from '@fortawesome/react-fontawesome'
+import thumb1 from './thumbs/thumb1.jpg'
+import thumb2 from './thumbs/thumb2.jpg'
+import thumb3 from './thumbs/thumb3.jpg'
+import thumb4 from './thumbs/thumb4.jpg'
 
 class FirstScreen extends React.Component {
   constructor(props) {
@@ -32,6 +36,7 @@ class FirstScreen extends React.Component {
 
  render() {
    const images = [Background1, Background2, Background3, Background4];
+   const thumbs = [thumb1, thumb2, thumb3, thumb4];
    const slidesCount = this.state.slides;
    const activeSlide = this.state.activeSlide;
    const sliderSettings = {
@@ -46,7 +51,7 @@ class FirstScreen extends React.Component {
        { breakpoint: 1200, settings: { dots: false }}
      ],
      customPaging: function(i) {
-       return <div className="img-thumb" style={{backgroundImage: `url(${images[i]})`}}>
+       return <div className="img-thumb" style={{backgroundImage: `url(${thumbs[i]})`}}>
          <div className="cover" />
          <FaIcon icon="plus" className="plus-icon"/>
        </div>
