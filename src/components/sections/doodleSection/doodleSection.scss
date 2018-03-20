@@ -20,17 +20,66 @@
   z-index: 2;
 }
 
-.cover-wrapper {
-  background-image: url('./cover.jpg');
+.doodle-section .cover-wrapper {
   position: relative;
   display: inline-block;
   width: 100%;
   min-height: 1px;
   height: 100%;
   z-index: 4;
+  background-image: url('./cover.jpg');
 }
 
-.player-wrapper {
+.doodle-section .cover-wrapper:hover {
+  cursor: pointer;
+}
+
+.doodle-section .cover-wrapper:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(184, 146, 118, 0.3);
+  transition: background-color 0.3s;
+}
+
+.doodle-section .cover-wrapper:hover:before {
+  background-color: rgba(184, 146, 118, 0.15);
+}
+
+.doodle-section .cover-wrapper:after {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  right: 7px;
+  bottom: 7px;
+  border: 2px solid rgba(65, 64, 71, 0.3);
+}
+
+
+.doodle-section .cover-wrapper .play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  background-color: transparent;
+  padding: 15px 17px 15px 23px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  transition: all 0.3s;
+  z-index: 8;
+}
+
+.doodle-section .cover-wrapper .play-icon:hover {
+  border-color: rgba(255,255,255, 0.5);
+  background-color: #b89276;
+}
+
+.doodle-section .player-wrapper {
   position: relative;
   z-index: 5;
   width: 100%;
@@ -39,13 +88,13 @@
 // responsive behavior
 
 @media (max-width: 320px) {
-  .doodle-wrapper {
+  .doodle-section .doodle-wrapper {
     width: 290px;
   }
 }
 
 @media (min-width: 321px) and (max-width: 767px) {
-  .doodle-wrapper {
+  .doodle-section .doodle-wrapper {
     width: 320px;
   }
 }

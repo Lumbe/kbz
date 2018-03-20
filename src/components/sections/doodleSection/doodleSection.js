@@ -3,6 +3,7 @@ import {Grid, Row, Col, Modal} from 'react-bootstrap'
 import './doodleSection.scss'
 import YouTube from 'react-youtube'
 import FaIcon from '@fortawesome/react-fontawesome'
+
 export default class DoodleVideo extends React.Component {
   constructor(props) {
     super(props);
@@ -45,7 +46,9 @@ export default class DoodleVideo extends React.Component {
                     />
                   </div>
                 :
-                  <div className="cover-wrapper" onClick={this.toggle.bind(this)}/>
+                  <div className="cover-wrapper" onClick={this.toggle.bind(this)}>
+                    <div className="play-icon"><FaIcon icon="play" size="3x"/></div>
+                  </div>
               }
             </div>
           </Col>
