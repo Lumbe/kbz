@@ -54,7 +54,27 @@ class FirstScreen extends React.Component {
      afterChange: (newIndex) => this.setActiveSlide(newIndex + 1)
    };
    return (
-     <div className="first-screen" style={{minHeight: '600px'}}>
+     <div className="first-screen">
+       <div className="social-buttons">
+         <div className="wrapper">
+           <a href="#" className="social-item">
+             <FaIcon icon={["fab", "facebook-f"]} fixedWidth />
+           </a>
+           <div className="social-title">Facebook</div>
+         </div>
+         <div className="wrapper">
+           <a href="#" className="social-item">
+             <FaIcon icon={["fab", "instagram"]} fixedWidth />
+           </a>
+           <div className="social-title">Instagram</div>
+         </div>
+         <div className="wrapper">
+           <a href="#" className="social-item">
+             <FaIcon icon={["fab", "youtube"]} fixedWidth />
+           </a>
+           <div className="social-title">Youtube</div>
+         </div>
+       </div>
        <Slider
          ref={c => this.slider = c }
          {...sliderSettings}

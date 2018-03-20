@@ -69,7 +69,8 @@
   text-transform: uppercase;
 }
 
-.navbar-default .top-navbar-menu > li > a::after {
+.navbar-default .top-navbar-menu > li > a::after,
+.navbar-default .header-phone .callback-button:after {
   position: absolute;
   top: 100%;
   left: 0;
@@ -88,7 +89,9 @@
 }
 
 .navbar-default .top-navbar-menu > li > a:hover::after,
-.navbar-default .top-navbar-menu > li > a:focus::after {
+.navbar-default .top-navbar-menu > li > a:focus::after,
+.navbar-default .header-phone .callback-button:hover::after,
+.navbar-default .header-phone .callback-button:focus::after {
   opacity: 1;
   -webkit-transform: translateY(0px);
   -moz-transform: translateY(0px);
@@ -98,6 +101,21 @@
 .navbar-default .header-phone {
   display: inline-block;
   padding: 20px 0;
+}
+
+.navbar-default .header-phone .phone {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar-default .header-phone .callback-button {
+  position: relative;
+  display: inline-block;
+  padding: 3px 0 6px;
+}
+
+.navbar-default .header-phone .callback-button:hover {
+  cursor: pointer;
 }
 
 .navbar-collapse {
