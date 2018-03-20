@@ -14,22 +14,39 @@ import {utils, Button} from 'react-bootstrap'
 utils.bootstrapUtils.addStyle(Button, 'more');
 fontawesome.library.add(faUser, brands);
 
-const App = () => (
-  <Router>
-    <div>
-      {/*<nav>*/}
-        {/*<Link to="/">Home</Link>*/}
-        {/*<Link to="/about">About</Link>*/}
-        {/*<Link to="/blog">Blog</Link>*/}
-        {/*<Link to="/typography">Typography</Link>*/}
-      {/*</nav>*/}
-      <Navbar/>
-      <div className="content">
-        <Routes />
+class App extends React.Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {preloader: true}
+  // }
+
+  componentDidMount() {
+    setTimeout(() => this.setState({preloader: false}), 4000)
+  }
+
+  render() {
+    return (
+      <div>
+        <Router>
+          <div>
+            {/*<nav>*/}
+            {/*<Link to="/">Home</Link>*/}
+            {/*<Link to="/about">About</Link>*/}
+            {/*<Link to="/blog">Blog</Link>*/}
+            {/*<Link to="/typography">Typography</Link>*/}
+            {/*</nav>*/}
+            <Navbar/>
+            <div className="content">
+              <Routes />
+            </div>
+            <Footer/>
+          </div>
+        </Router>
       </div>
-      <Footer/>
-    </div>
-  </Router>
-)
+    )
+  }
+}
+
+
 
 export default hot(module)(App)

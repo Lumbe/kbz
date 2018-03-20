@@ -4,8 +4,16 @@ img {
   max-width: 100%;
 }
 
+.preloader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: green;
+  z-index: 9999;
+}
+
 .content {
-  min-height: 600px;
+  //min-height: 600px;
 }
 
 button:focus {
