@@ -18,6 +18,13 @@
   padding-top: 41.68%;
   position: relative;
   z-index: -1;
+  transition: transform 2s 2s linear, -webkit-transform 2s 2s linear;
+  transform: scale(1);
+}
+
+.slide-item.slick-active .bg-img {
+  transition: transform 10s linear, -webkit-transform 10s linear;
+  transform: scale(1.13);
 }
 
 .first-screen .bg-square {
