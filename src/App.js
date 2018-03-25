@@ -10,7 +10,7 @@ import fontawesome from '@fortawesome/fontawesome'
 import {faUser } from '@fortawesome/fontawesome-free-solid'
 import brands from '@fortawesome/fontawesome-free-brands'
 import {utils, Button} from 'react-bootstrap'
-import FirstScreen from './components/firstScreen/FirstScreen'
+import FirstScreen from './components/sections/firstScreen/FirstScreen'
 
 utils.bootstrapUtils.addStyle(Button, 'more');
 fontawesome.library.add(faUser, brands);
@@ -20,7 +20,7 @@ class App extends React.Component {
   //   super(props);
   //   this.state = {preloader: true}
   // }
-
+  //
   // componentDidMount() {
   //   setTimeout(() => this.setState({preloader: false}), 4000)
   // }
@@ -29,20 +29,15 @@ class App extends React.Component {
     return (
       <div>
         <Router>
-          <div>
             {/*<nav>*/}
             {/*<Link to="/">Home</Link>*/}
             {/*<Link to="/about">About</Link>*/}
             {/*<Link to="/blog">Blog</Link>*/}
             {/*<Link to="/typography">Typography</Link>*/}
             {/*</nav>*/}
-            <Navbar/>
-            <div className="content">
-              <FirstScreen/>
-              <Routes />
-            </div>
-            <Footer/>
-          </div>
+            {/*<Navbar/>*/}
+            <Routes />
+            {/*<Footer/>*/}
         </Router>
       </div>
     )

@@ -23,14 +23,14 @@ export default class ServicesSection extends React.Component {
     return (
       <Grid className="services-section">
         <Row>
-          <Col md={12}>
+          <Col md={12} className="animated fadeIn">
             <h1 className="section-title">
               <span className="decorated">
                 <span className="thin-line">Наши услуги</span>
               </span>
             </h1>
           </Col>
-          <Col md={12}>
+          <Col md={12} className="animated fadeInUp">
             <Slider {...sliderSettings}>
               <div>
                 <div className="slide-card">

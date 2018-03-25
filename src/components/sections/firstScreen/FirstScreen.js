@@ -29,6 +29,13 @@ class FirstScreen extends React.Component {
     this.slider.slickPrev()
   }
 
+  componentDidMount() {
+    // this.setState({transform: true});
+    // setTimeout(() => {this.setState({transform: false})}, 10000);
+    // console.log('slider',this.slider);
+    // this.slider.props.children[0].props.className = 'slide-item';
+  }
+
   setActiveSlide(index) {
     let slidesCount = this.state.slides;
     index > slidesCount ? this.setState({activeSlide: 1}) : this.setState({activeSlide: index})
@@ -40,6 +47,7 @@ class FirstScreen extends React.Component {
    const slidesCount = this.state.slides;
    const activeSlide = this.state.activeSlide;
    const sliderSettings = {
+     className: 'main-slider',
      arrows: false,
      dots: true,
      dotsClass: 'slick-thumb',
@@ -85,7 +93,7 @@ class FirstScreen extends React.Component {
          {...sliderSettings}
        >
          <div className="slide-item">
-           <div className="bg-img" style={{backgroundImage: `url(${Background1})`}}/>
+           <div className={this.state.transform ? 'bg-img animate-img' : 'bg-img'} style={{backgroundImage: `url(${Background1})`}}/>
            <div className='bg-square'>
              <div className="bg-bottom-line" />
            </div>

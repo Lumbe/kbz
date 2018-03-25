@@ -3,6 +3,7 @@ import {Grid, Row, Col, Modal} from 'react-bootstrap'
 import './doodleSection.scss'
 import YouTube from 'react-youtube'
 import FaIcon from '@fortawesome/react-fontawesome'
+import Waypoint from 'react-waypoint'
 
 export default class DoodleVideo extends React.Component {
   constructor(props) {
@@ -24,7 +25,7 @@ export default class DoodleVideo extends React.Component {
     return (
       <Grid fluid className="doodle-section">
         <Row>
-          <Col md={12}>
+          <Col md={12} className="animated fadeIn">
             <h1 className="section-title light">
               <span className="decorated">
                 <span className="thin-line">Преимущества</span>
@@ -35,7 +36,7 @@ export default class DoodleVideo extends React.Component {
             </div>
           </Col>
           <Col md={12} className="text-center">
-            <div className="doodle-wrapper">
+            <div className="doodle-wrapper animated zoomIn">
               <FaIcon icon="spinner" spin size="lg" className="load-icon"/>
               {this.state.showDoodle
                 ?

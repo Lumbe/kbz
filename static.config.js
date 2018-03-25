@@ -59,6 +59,12 @@ export default {
         ],
       },
     ];
+    // support for Internet Explorer browser
+    if (stage === 'prod') {
+      config.entry = ['babel-polyfill', config.entry]
+    } else if (stage === 'dev') {
+      config.entry = ['babel-polyfill', ...config.entry]
+    }
     return config
   },
   // inlineCss: true,

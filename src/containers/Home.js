@@ -1,42 +1,33 @@
 import React from 'react'
 import { withSiteData } from 'react-static'
-import FirstScreen from '../components/firstScreen/FirstScreen'
 import universal from 'react-universal-component'
+import {Image} from 'react-bootstrap'
+import logo from '../components/common/logo.png'
 
 const Failed = () => (
-  <div style={{ color: 'red' }}>
-    <h1>Failed to load the heavy component!</h1>
+  <div className="preloader">
+    <h1>Ошибка загрузки!</h1>
   </div>
 );
 
 const Loading = () => (
-  <div style={{ color: 'yellow' }}>
-    <h1>Loading first screen heavy component...</h1>
+  <div className="preloader">
+    <Image src={logo} className="preloader-logo"/>
   </div>
 );
 
-const LandingSections = universal(import('../components/LandingSections'));
+const HomeUniversal = universal(import('./HomeUniversal'), {
+  loading: Loading,
+  error: Failed,
+  minDelay: 4000,
+  alwaysDelay: true
+});
 
 
 class Home extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {preloading: false}
-  }
-
-  componentDidMount() {
-    this.setState({preloading: true});
-    // setTimeout(() => {LandingSections.preload().then(() => {
-    //
-    // })}, 3000)
-  }
-
   render() {
     return (
-      <div>
-        {/*<FirstScreen/>*/}
-        <LandingSections/>
-      </div>
+      <HomeUniversal/>
     )
   }
 }
