@@ -1,0 +1,53 @@
+#preloader-wrapper {
+  background: #4c4b53;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: 9999;
+  animation-name: logoWrapperFade;
+  animation-duration: 1.5s;
+  animation-delay: 3.5s;
+  animation-timing-function: ease;
+}
+
+#preloader {
+  position: absolute;
+  width: 100%;
+}
+
+.preloader-logo {
+  position: absolute;
+  margin-top: -50px;
+  left: 47%;
+  animation-name: logoAnimation;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes logoAnimation {
+  0% {
+    bottom: 0;
+    transform: scale(0.5);
+  }
+  30% {
+    bottom: 50%;
+    transform: scale(1);
+  }
+  75% {
+    bottom: 50%;
+    transform: scale(1);
+  }
+  100% {
+    bottom: 100%;
+    transform: scale(0.5);
+  }
+}
+
+@keyframes logoWrapperFade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

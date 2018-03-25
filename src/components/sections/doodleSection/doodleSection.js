@@ -3,7 +3,6 @@ import {Grid, Row, Col, Modal} from 'react-bootstrap'
 import './doodleSection.scss'
 import YouTube from 'react-youtube'
 import FaIcon from '@fortawesome/react-fontawesome'
-import Waypoint from 'react-waypoint'
 
 export default class DoodleVideo extends React.Component {
   constructor(props) {
