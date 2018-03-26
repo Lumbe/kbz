@@ -1,5 +1,6 @@
 import React from 'react'
-import {Navbar, Image, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap'
+import {Link} from 'react-static'
+import {Navbar, Image, Nav, NavItem} from 'react-bootstrap'
 import logo from './logo.png'
 import './topNavbar.scss'
 import FaIcon from '@fortawesome/react-fontawesome'
@@ -35,7 +36,7 @@ class TopNavbar extends React.Component {
               <div className="callback-button">Обратный звонок</div>
             </div>
             <Nav pullRight className="top-navbar-menu">
-              <NavItem eventKey={1} href="#">
+              <NavItem eventKey={1}>
                 Главная
               </NavItem>
               <NavItem eventKey={2} href="#">
