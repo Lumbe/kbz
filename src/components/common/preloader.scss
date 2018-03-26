@@ -4,10 +4,16 @@
   width: 100%;
   height: 100%;
   z-index: 9999;
-  animation-name: logoWrapperFade;
-  animation-duration: 2s;
-  animation-delay: 3.5s;
-  animation-timing-function: ease;
+  transition: opacity 2s, visibility 3s;
+  //animation-name: logoWrapperFade;
+  //animation-duration: 2s;
+  //animation-delay: 3.5s;
+  //animation-timing-function: ease;
+}
+
+#preloader-wrapper.transparent {
+  visibility: hidden;
+  opacity: 0;
 }
 
 #preloader {

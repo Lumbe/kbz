@@ -37,19 +37,20 @@ import Preloader from '../components/common/preloader'
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {showPreloader: true}
+    this.state = {hidePreloader: false}
   }
 
   componentDidMount() {
-    setTimeout(() => this.setState({showPreloader: false}), 5000)
+    setTimeout(() => this.setState({hidePreloader: true}), 4250)
   }
 
   render() {
-    const showPreloader = this.state.showPreloader;
+    const hidePreloader = this.state.hidePreloader;
     return (
     <div>
-      {showPreloader && <Preloader/>}
-        <Navbar/>
+      <Preloader hidden={hidePreloader}/>
+      {/*<Preloader/>*/}
+      <Navbar/>
         <div className="content">
           <FirstScreen/>
           <ServicesSection/>

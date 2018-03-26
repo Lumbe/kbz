@@ -26,8 +26,9 @@ export default class Preloader extends React.Component {
   }
 
   render() {
+    const hidden = this.props.hidden || false;
     return (
-      <div id="preloader-wrapper">
+      <div id="preloader-wrapper" className={hidden ? 'transparent' : ''}>
         <div id="preloader">
           <Image src={logo} className="preloader-logo"/>
         </div>
