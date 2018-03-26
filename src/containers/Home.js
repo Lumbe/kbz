@@ -51,16 +51,15 @@ class Home extends React.Component {
       {showPreloader && <Preloader/>}
         <Navbar/>
         <div className="content">
-        <FirstScreen/>
-        <ServicesSection/>
-        <DoodleSection/>
-        <ServicePacks/>
-        <Advantages/>
-        <Gallery/>
-        <Steps/>
+          <FirstScreen/>
+          <ServicesSection/>
+          <DoodleSection/>
+          <ServicePacks/>
+          <Advantages/>
+          <Gallery/>
+          <Steps/>
         </div>
-          <Footer/>
-
+        <Footer/>
     </div>
     )
   }

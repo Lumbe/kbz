@@ -5,7 +5,7 @@
   height: 100%;
   z-index: 9999;
   animation-name: logoWrapperFade;
-  animation-duration: 1.5s;
+  animation-duration: 2s;
   animation-delay: 3.5s;
   animation-timing-function: ease;
 }
@@ -22,7 +22,8 @@
   margin-top: -50px;
   left: 47%;
   animation-name: logoAnimation;
-  animation-duration: 4s;
+  animation-delay: .25s;
+  animation-duration: 3.75s;
   animation-timing-function: ease-in-out;
 }
 
