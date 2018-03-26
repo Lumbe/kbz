@@ -41,7 +41,7 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    setTimeout(() => this.setState({hidePreloader: true}), 3000)
+    setTimeout(() => this.setState({hidePreloader: true}), 3750)
   }
 
   render() {
