@@ -13,7 +13,7 @@ import Advantages from '../components/sections/advantages/advantages'
 import Gallery from '../components/sections/gallery/gallery'
 import Steps from '../components/sections/steps/steps'
 import Preloader from '../components/common/preloader'
-
+import Page from '../components/layout/page'
 // const Failed = () => (
 //   <div className="preloader">
 //     <h1>Ошибка загрузки!</h1>
@@ -35,26 +35,12 @@ import Preloader from '../components/common/preloader'
 
 
 class Home extends React.Component {
-  constructor(props) {
-    super(props);
-    // this.state = {hidePreloader: false}
-    this.state = {showPreloader: true}
-  }
-
-  componentDidMount() {
-    // setTimeout(() => this.setState({hidePreloader: true}), 3750)
-    // setTimeout(() => this.setState({showPreloader: false}), 5000)
-  }
-
   render() {
-    // const hidePreloader = this.state.hidePreloader;
-    const showPreloader = this.state.showPreloader;
     return (
     <div>
-      {/*<Preloader hidden={hidePreloader}/>*/}
       <Preloader/>
       <Navbar/>
-        <div className="content">
+        <Page>
           <FirstScreen/>
           <ServicesSection/>
           <DoodleSection/>
@@ -62,7 +48,7 @@ class Home extends React.Component {
           <Advantages/>
           <Gallery/>
           <Steps/>
-        </div>
+        </Page>
         <Footer/>
     </div>
     )

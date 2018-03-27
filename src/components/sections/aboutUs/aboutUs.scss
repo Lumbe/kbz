@@ -1,0 +1,50 @@
+.about-us {
+  margin-top: 20px;
+  img {
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.06),0 13px 35px 0 rgba(0, 0, 0, 0.2);
+  }
+  .icon-group {
+    display: table-row;
+    &:first-of-type {
+      margin-top: 40px;
+    }
+    .icon {
+      position: relative;
+      display: table-cell;
+      min-width: 60px;
+      border-right: 1px solid #ccc;
+      vertical-align: middle;
+      text-align: center;
+      padding: 10px 30px 10px 0;
+      transition: border-color 1s, border-width 1s;
+      &.third {
+        padding-right: 23px;
+      }
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 3px;
+        min-height: 1px;
+        height: 80%;
+        right: -2px;
+        background-color: #b89276;
+        opacity: 0;
+        transition: opacity 1.5s;
+      }
+    }
+    &:hover .icon:before {
+      opacity: 1;
+    }
+    .description {
+      display: table-cell;
+      cursor: default;
+      margin-left: 100px;
+      padding: 8px 0 8px 20px;
+      vertical-align: middle;
+    }
+    &:last-child .description {
+      padding-top: 15px;
+    }
+  }
+}

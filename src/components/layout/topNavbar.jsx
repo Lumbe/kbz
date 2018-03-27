@@ -10,13 +10,14 @@ import Headroom from 'react-headroom'
 
 class TopNavbar extends React.Component {
   render() {
+    const dark = this.props.dark || false;
     return (
       <Headroom
         // className="top-navbar"
         // stickyClassName="sticky"
         // topOffset={50}
       >
-        <Navbar collapseOnSelect fluid>
+        <Navbar collapseOnSelect fluid className={dark ? 'dark' : ''}>
           <Navbar.Header>
             <Navbar.Brand>
               <Image src={logo} responsive/>

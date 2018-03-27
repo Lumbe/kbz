@@ -1,10 +1,15 @@
-
 import React from 'react'
-//
+import Navbar from '../components/layout/topNavbar'
+import Footer from '../components/layout/footer'
+import Page from '../components/layout/page'
+import AboutUs from '../components/sections/aboutUs/aboutUs'
 
 export default () => (
   <div>
-    <h1>This is what we’re all about.</h1>
-    <p>React, static sites, performance, speed. It’s the stuff that makes us tick.</p>
+    <Navbar dark/>
+    <Page>
+      <AboutUs/>
+    </Page>
+    <Footer/>
   </div>
 )
