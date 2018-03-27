@@ -4,6 +4,7 @@ import Footer from '../components/layout/footer'
 import Page from '../components/layout/page'
 import AboutUs from '../components/sections/aboutUs/aboutUs'
 import Certificates from '../components/sections/certificates/certificates'
+import Reviews from '../components/sections/reviews/reviews'
 
 export default () => (
   <div>
@@ -11,6 +12,7 @@ export default () => (
     <Page>
       <AboutUs/>
       <Certificates/>
+      <Reviews/>
     </Page>
     <Footer/>
   </div>
