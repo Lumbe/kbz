@@ -65,6 +65,12 @@
   text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
 }
 
+.headroom .navbar-default .navbar-nav > .active > a,
+.headroom .navbar-default .navbar-nav > .active > a:hover,
+.headroom .navbar-default .navbar-nav > .active > a:focus {
+  background-color: transparent;
+}
+
 .headroom .navbar-default .top-navbar-menu {
   text-transform: uppercase;
 }
@@ -90,6 +96,9 @@
 
 .headroom .navbar-default .top-navbar-menu > li > a:hover::after,
 .headroom .navbar-default .top-navbar-menu > li > a:focus::after,
+.headroom .navbar-default .top-navbar-menu > .active > a::after,
+.headroom .navbar-default .top-navbar-menu > .active > a:hover::after,
+.headroom .navbar-default .top-navbar-menu > .active > a:focus::after,
 .headroom .navbar-default .header-phone .callback-button:hover::after,
 .headroom .navbar-default .header-phone .callback-button:focus::after {
   opacity: 1;

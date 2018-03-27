@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-static'
 import {Navbar, Image, Nav, NavItem} from 'react-bootstrap'
+import {IndexLinkContainer, LinkContainer} from 'react-router-bootstrap'
 import logo from './logo.png'
 import './topNavbar.scss'
 import FaIcon from '@fortawesome/react-fontawesome'
@@ -36,24 +37,36 @@ class TopNavbar extends React.Component {
               <div className="callback-button">Обратный звонок</div>
             </div>
             <Nav pullRight className="top-navbar-menu">
-              <NavItem eventKey={1}>
-                Главная
-              </NavItem>
-              <NavItem eventKey={2} href="#">
-                О нас
-              </NavItem>
-              <NavItem eventKey={2} href="#">
-                Услуги
-              </NavItem>
-              <NavItem eventKey={2} href="#">
-                Магазин
-              </NavItem>
-              <NavItem eventKey={2} href="#">
-                Стоимость
-              </NavItem>
-              <NavItem eventKey={2} href="#">
-                Контакты
-              </NavItem>
+              <IndexLinkContainer to="/">
+                <NavItem eventKey={1}>
+                  Главная
+                </NavItem>
+              </IndexLinkContainer>
+              <LinkContainer to="/about">
+                <NavItem eventKey={2}>
+                  О нас
+                </NavItem>
+              </LinkContainer>
+              <LinkContainer to="/services">
+                <NavItem eventKey={3}>
+                  Услуги
+                </NavItem>
+              </LinkContainer>
+              <LinkContainer to="/shop">
+                <NavItem eventKey={4}>
+                  Магазин
+                </NavItem>
+              </LinkContainer>
+              <LinkContainer to="/price">
+                <NavItem eventKey={5}>
+                  Стоимость
+                </NavItem>
+              </LinkContainer>
+              <LinkContainer to="/contacts">
+                <NavItem eventKey={6}>
+                  Контакты
+                </NavItem>
+              </LinkContainer>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

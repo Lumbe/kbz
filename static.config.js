@@ -18,6 +18,18 @@ export default {
         component: 'src/containers/About',
       },
       {
+        path: '/services',
+        component: 'src/containers/Services',
+      },
+      {
+        path: '/price',
+        component: 'src/containers/Price',
+      },
+      {
+        path: '/contacts',
+        component: 'src/containers/Contacts',
+      },
+      {
         path: '/typography',
         component: 'src/containers/Typography',
       },
