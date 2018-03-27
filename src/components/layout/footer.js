@@ -1,7 +1,7 @@
 import React from 'react'
 import './footer.scss'
 import {Grid, Row, Col, Image, Button, Clearfix} from 'react-bootstrap'
-import logo from './logo.png'
+import logo from '../common/logo.png'
 import FaIcon from '@fortawesome/react-fontawesome'
 
 export default class Footer extends React.Component {

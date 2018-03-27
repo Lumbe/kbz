@@ -3,8 +3,8 @@ import { withSiteData } from 'react-static'
 import universal from 'react-universal-component'
 import {Image} from 'react-bootstrap'
 import logo from '../components/common/logo.png'
-import Navbar from '../components/common/topNavbar'
-import Footer from '../components/common/footer'
+import Navbar from '../components/layout/topNavbar'
+import Footer from '../components/layout/footer'
 import FirstScreen from '../components/sections/firstScreen/FirstScreen'
 import ServicesSection from '../components/sections/services/ServicesSection'
 import DoodleSection from '../components/sections/doodleSection/doodleSection'
@@ -37,19 +37,22 @@ import Preloader from '../components/common/preloader'
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {hidePreloader: false}
+    // this.state = {hidePreloader: false}
+    this.state = {showPreloader: true}
   }
 
   componentDidMount() {
-    setTimeout(() => this.setState({hidePreloader: true}), 3750)
+    // setTimeout(() => this.setState({hidePreloader: true}), 3750)
+    // setTimeout(() => this.setState({showPreloader: false}), 5000)
   }
 
   render() {
-    const hidePreloader = this.state.hidePreloader;
+    // const hidePreloader = this.state.hidePreloader;
+    const showPreloader = this.state.showPreloader;
     return (
     <div>
-      <Preloader hidden={hidePreloader}/>
-      {/*<Preloader/>*/}
+      {/*<Preloader hidden={hidePreloader}/>*/}
+      <Preloader/>
       <Navbar/>
         <div className="content">
           <FirstScreen/>
