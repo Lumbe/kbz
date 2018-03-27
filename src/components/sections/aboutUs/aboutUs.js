@@ -8,7 +8,7 @@ export default class AboutUs extends React.Component {
     return (
       <Grid className="section about-us">
         <Row>
-          <Col md={6}>
+          <Col md={6} smHidden xsHidden>
             <Image src={familyImg} responsive/>
           </Col>
           <Col md={6}>
